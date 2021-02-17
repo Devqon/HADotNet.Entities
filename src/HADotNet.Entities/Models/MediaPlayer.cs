@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Collections.Generic;
-using HADotNet.Core.Constants;
 using HADotNet.Core.Models;
+using HADotNet.Common.Constants;
 using HADotNet.Entities.Models.Interfaces;
 
 namespace HADotNet.Entities.Models
