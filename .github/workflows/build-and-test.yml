@@ -16,10 +16,19 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
+        dotnet-version: 3.1.x
     - name: Restore dependencies
       run: dotnet restore
+      working-directory: ./src/
     - name: Build
       run: dotnet build --no-restore
+      working-directory: ./src/
     - name: Test
       run: dotnet test --no-build --verbosity normal
+      working-directory: ./src/
+    - name: Publish
+      uses: rohith/publish-nuget@v2
+      with:
+        PROJECT_FILE_PATH: src/HADotNet.Entities/HADotNet.Entities.csproj
+        NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+        
