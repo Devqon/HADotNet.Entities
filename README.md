@@ -10,13 +10,13 @@ A wrapper around the excellent [HADotNet.Core REST api](https://github.com/qJake
 - Websockets or any real-time update strategy
 
 ## Currently (partially) implemented HA domains
-- binary_sensor
-- climate
-- light
-- switch
-- media_player
-- sensor
-- switch
+- [binary_sensor](src/HADotNet.Entities/Models/BinarySensor.cs)
+- [climate](src/HADotNet.Entities/Models/Climate.cs) (TurnOn, TurnOff, SetTemperature, SetHvacMode)
+- [light](src/HADotNet.Entities/Models/Light.cs) (TurnOn, TurnOff, Toggle)
+- [switch](src/HADotNet.Entities/Models/Switch.cs)
+- [media_player](src/HADotNet.Entities/Models/MediaPlayer.cs) (TurnOn, TurnOff, Toggle, SelectSource, Play, Pause, Stop, Mute, VolumeUp, VolumeDown, VolumeSet)
+- [sensor](src/HADotNet.Entities/Models/Sensor.cs)
+- [switch](src/HADotNet.Entities/Models/Switch.cs) (TurnOn, TurnOff, Toggle)
 
 ## Example usage
 
