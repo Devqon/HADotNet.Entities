@@ -11,7 +11,9 @@ namespace HADotNet.Entities.Models
     /// </summary>
     public class MediaPlayer : Entity, ITurnOn, ITurnOff, IToggle
     {
-        public MediaPlayer() : base(DomainConstants.MediaPlayer)
+        public override string Domain => DomainConstants.MediaPlayer;
+
+        public MediaPlayer(string entityId) : base(entityId)
         {
         }
 

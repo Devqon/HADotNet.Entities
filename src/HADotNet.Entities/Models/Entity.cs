@@ -20,7 +20,7 @@ namespace HADotNet.Entities.Models
         /// <summary>
         /// Gets or sets the Entity ID
         /// </summary>
-        public string EntityId { get; set; }
+        public string EntityId { get; }
 
         /// <summary>
         /// Gets or sets the Entity name
@@ -28,9 +28,9 @@ namespace HADotNet.Entities.Models
         public string EntityName { get; set; }
 
         /// <summary>
-        /// Gets or sets the Entity's domain
+        /// Gets the Entity's domain
         /// </summary>
-        public string Domain { get; private set; }
+        public abstract string Domain { get; }
 
         /// <summary>
         /// Gets the current state
@@ -66,9 +66,9 @@ namespace HADotNet.Entities.Models
         /// Creates an entity
         /// </summary>
         /// <param name="domain"></param>
-        protected Entity(string domain)
+        protected Entity(string entityId)
         {
-            Domain = domain;
+            EntityId = entityId.Contains(".") ? entityId.Split('.')[1] : entityId;
         }
 
         /// <summary>

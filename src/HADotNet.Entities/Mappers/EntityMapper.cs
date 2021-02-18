@@ -12,12 +12,12 @@ namespace HADotNet.Entities.Mappers
         /// <typeparam name="TEntity"></typeparam>
         /// <param name="stateObject">The state object to apply</param>
         /// <returns></returns>
-        public static TEntity MapToEntity<TEntity>(StateObject stateObject) where TEntity : Entity, new()
+        public static TEntity MapToEntity<TEntity>(StateObject stateObject) where TEntity : Entity
         {
             if (stateObject is null)
                 throw new System.ArgumentNullException(nameof(stateObject));
 
-            var entity = new TEntity();
+            var entity = EntityFactory.CreateEntity<TEntity>(stateObject.EntityId);
             MapToEntity(entity, stateObject);
             return entity;
         }
@@ -38,7 +38,6 @@ namespace HADotNet.Entities.Mappers
                 throw new System.ArgumentNullException(nameof(stateObject));
 
             entity.State = stateObject.State;
-            entity.EntityId = stateObject.EntityId.Split('.')[1];
             entity.EntityName = stateObject.GetFriendlyName();
             entity.LastChanged = stateObject.LastChanged;
             entity.LastUpdated = stateObject.LastUpdated;

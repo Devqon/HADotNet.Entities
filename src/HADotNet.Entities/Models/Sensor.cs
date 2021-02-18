@@ -4,7 +4,9 @@ namespace HADotNet.Entities.Models
 {
     public class Sensor : Entity
     {
-        public Sensor() : base(DomainConstants.Sensor) 
+        public override string Domain => DomainConstants.Sensor;
+
+        public Sensor(string entityId) : base(entityId)
         {
         }
     }

@@ -11,10 +11,12 @@ namespace HADotNet.Entities.Models
     /// </summary>
     public class Climate : Entity, ITurnOn, ITurnOff
     {
+        public override string Domain => DomainConstants.Climate;
+
         /// <summary>
         /// Creates a climate entity
         /// </summary>
-        public Climate() : base(DomainConstants.Climate) 
+        public Climate(string entityId) : base(entityId)
         {
         }
 

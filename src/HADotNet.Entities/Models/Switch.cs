@@ -11,7 +11,9 @@ namespace HADotNet.Entities.Models
     /// </summary>
     public class Switch : Entity, ITurnOn, ITurnOff, IToggle
     {
-        public Switch() : base(DomainConstants.Switch)
+        public override string Domain => DomainConstants.Switch;
+
+        public Switch(string entityId) : base(entityId)
         {
         }
 

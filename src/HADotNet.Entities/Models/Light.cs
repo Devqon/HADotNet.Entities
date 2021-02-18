@@ -11,10 +11,12 @@ namespace HADotNet.Entities.Models
     /// </summary>
     public class Light : Entity, ITurnOn, ITurnOff, IToggle
     {
+        public override string Domain => DomainConstants.Light;
+
         /// <summary>
         /// Creates a light entity
         /// </summary>
-        public Light() : base(DomainConstants.Light)
+        public Light(string entityId) : base(entityId)
         {
         }
 

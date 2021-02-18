@@ -7,10 +7,12 @@ namespace HADotNet.Entities.Models
     /// </summary>
     public class BinarySensor : Entity
     {
+        public override string Domain => DomainConstants.BinarySensor;
+
         /// <summary>
         /// Creates a binary sensor entity
         /// </summary>
-        public BinarySensor() : base(DomainConstants.BinarySensor)
+        public BinarySensor(string entityId) : base(entityId)
         {
         }
     }
