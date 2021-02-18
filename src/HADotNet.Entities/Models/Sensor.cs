@@ -1,4 +1,4 @@
-﻿using HADotNet.Common.Constants;
+﻿using HADotNet.Entities.Constants;
 
 namespace HADotNet.Entities.Models
 {

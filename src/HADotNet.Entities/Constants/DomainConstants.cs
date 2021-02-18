@@ -1,4 +1,4 @@
-﻿namespace HADotNet.Common.Constants
+﻿namespace HADotNet.Entities.Constants
 {
     /// <summary>
     /// A dictionary class consisting of HA domain strings

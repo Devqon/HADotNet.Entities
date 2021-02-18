@@ -5,7 +5,7 @@ using System.Linq;
 using HADotNet.Core;
 using HADotNet.Core.Models;
 using HADotNet.Core.Clients;
-using HADotNet.Common.Constants;
+using HADotNet.Entities.Constants;
 using HADotNet.Entities.Extensions;
 using HADotNet.Entities.Mappers;
 using HADotNet.Entities.Models.Interfaces;
