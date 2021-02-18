@@ -5,6 +5,8 @@ A wrapper around the excellent [HADotNet.Core REST api](https://github.com/qJake
 - .NET Standard 2.0 cross-platform library
 - DI-friendly initialization
 - Home Assistant entities represented by strongly typed C# classes
+  - Strongly typed methods (TurnOn, TurnOff etc.)
+  - Strongly typed attributes (climate.CurrentTemperature, mediaPlayer.IsMuted etc.)
 
 ## Does NOT (yet?) include
 - Websockets or any real-time update strategy
