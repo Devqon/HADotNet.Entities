@@ -22,6 +22,12 @@ A wrapper around the excellent [HADotNet.Core REST api](https://github.com/qJake
 
 ## Example usage
 
+#### Installation
+The package is available on [nuget.org](https://www.nuget.org/packages/HADotNet.Entities/):
+```
+Install-Package HADotNet.Entities
+```
+
 #### Initialization
 ```csharp
 // Initialize the HADotNet.Core clients
